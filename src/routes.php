@@ -1,7 +1,13 @@
 <?php
-use Symfony\Component\Routing;
+namespace Core;
 
-$routes = new Routing\RouteCollection();
-$routes->add('', new Routing\Route('/home/'));
+use Core\Router;
 
-return $routes;
+class Routes extends \Core\Kernel
+{
+    public function __construct()
+    {
+        $router = new Router();
+        $router->add('home', '/', 'App:HomeController:Index');
+    }
+}

@@ -15,7 +15,8 @@ class Kernel
         if (!session_id()) {
             session_start();
         }
-        
+        new \Core\Http();
+        new \Core\Routes();
         $this->view = $c->get('view');
         $this->db   = $c->get('db');
     }
