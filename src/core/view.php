@@ -14,7 +14,7 @@ final class view extends kernel
         $this->loader = new \Twig_Loader_Filesystem(__DIR__ . '/../view/');
         $this->twig   = new \Twig_Environment($this->loader,
             array(
-            'cache' => __DIR__ . '/../../view/',
+            'cache' => __DIR__ . '/../../cache/twig/',
         ));
     }
 
