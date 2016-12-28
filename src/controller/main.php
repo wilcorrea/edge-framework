@@ -2,11 +2,16 @@
 
 namespace App\Controller;
 
-class main extends \Core\Kernel
-{
+use Core\http;
 
-    function __construct()
+class main 
+{
+    protected $http;
+
+    public function __construct(http $r)
     {
-        
+        $this->http = $r;
+
     }
+
 }

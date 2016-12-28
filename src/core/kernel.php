@@ -3,9 +3,11 @@
 namespace Core;
 
 use Core\router;
+use Core\http;
 
-class Kernel
+class kernel
 {
+    protected $http;
     protected $router;
 
     public function __construct()
@@ -13,11 +15,11 @@ class Kernel
         if (!session_id()) {
             session_start();
         }
-
+        $this->http = new Http();
         $this->router = new Router();
-        ob_start();
+        //ob_start();
         $this->router->router();
-        $output       = ob_get_contents();
-        ob_end_clean();
+        //$output       = ob_get_contents();
+        //ob_end_clean();
     }
 }

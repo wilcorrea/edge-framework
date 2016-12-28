@@ -2,26 +2,27 @@
 
 namespace App\Controller;
 
-use Core\http;
 
-class home extends main
+final class home extends main
 {
-    protected $request;
-    protected $response;
+    protected $http;
 
     function __construct()
     {
-        $this->request = new \Core\Http();
+        parent::__construct();
     }
 
-    public function dispatch()
+    function dispatch()
     {
-        $data = file_get_contents(__DIR__ . '/../view/home.twig') ;
-        echo $data;die;
+        
+        //$http = new \Core\http();
+        $this->http->response('oi', 200);
+        //$data = file_get_contents(__DIR__ . '/../view/home.twig') ;
+        //echo $data;die;
         //$this->request->response($data, $status);
     }
 
-    public function showId()
+    function showId()
     {
         var_dump('oi');
         die;
