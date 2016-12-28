@@ -2,10 +2,9 @@
 
 namespace App\Controller;
 
-
 final class home extends main
 {
-    
+
     function __construct()
     {
         parent::__construct();
@@ -14,12 +13,18 @@ final class home extends main
     function dispatch()
     {
         $data = $this->view->render('home.twig', array("title" => 'Hello!'));
-        $this->http->response($data, 200, 'text/html');
+        $this->http->response($data);
     }
 
-    function showId()
+    function dispatchPDF()
     {
-        var_dump('oi');
-        die;
+        $data = $this->view->render('home.twig', array("title" => 'Hello!'));
+        $this->http->responsePDF($data);
+    }
+
+    function dispatchJson()
+    {
+        $data = $this->view->render('home.twig', array("title" => 'Hello!'));
+        $this->http->responseJson(array("username" => "AnakinSkywalker", "password" => "vadd3r"));
     }
 }

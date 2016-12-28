@@ -91,6 +91,7 @@ final class http extends kernel
     {
         $mpdf = new mPDF();
         $mpdf->WriteHTML($data);
-        $mpdf->Output();
+        $pdf = $mpdf->Output();
+        $this->response($pdf, 200, 'application/pdf');
     }
 }

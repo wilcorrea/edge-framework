@@ -46,7 +46,7 @@ class Router extends Kernel
                 $handler        = $routeInfo[1];
                 $vars           = $routeInfo[2];
                 list($class, $method) = explode(":", $handler, 2);
-                $caller = new $class;
+                $caller         = new $class;
                 call_user_func_array(array($caller, $method), $vars);
                 break;
         }

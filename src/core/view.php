@@ -11,15 +11,16 @@ final class view extends kernel
     {
         \Twig_Autoloader::register();
 
-        $this->loader = new \Twig_Loader_Filesystem(__DIR__ . '/../view/');
+        $this->loader = new \Twig_Loader_Filesystem(__DIR__.'/../view/');
         $this->twig   = new \Twig_Environment($this->loader,
             array(
-            'cache' => __DIR__ . '/../../cache/twig/',
+            'cache' => __DIR__.'/../../cache/twig/',
         ));
     }
 
-    public function render($view, $params){
+    public function render($view, $params)
+    {
         $template = $this->twig->loadTemplate($view);
-        echo $template->render($params);
+        return $template->render($params);
     }
 }

@@ -14,7 +14,7 @@ class kernel
         if (!session_id()) {
             session_start();
         }
-        
+
         $this->router = new Router();
         ob_start();
         $this->router->router();
