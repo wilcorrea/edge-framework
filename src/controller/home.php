@@ -2,11 +2,11 @@
 
 namespace App\Controller;
 
+use Core\http;
 
 final class home extends main
 {
-    protected $http;
-
+    
     function __construct()
     {
         parent::__construct();
@@ -15,8 +15,8 @@ final class home extends main
     function dispatch()
     {
         
-        //$http = new \Core\http();
-        $this->http->response('oi', 200);
+        $data = file_get_contents(__DIR__ . '/../view/home.twig') ;
+        $this->http->response($data, 200, 'text/html');
         //$data = file_get_contents(__DIR__ . '/../view/home.twig') ;
         //echo $data;die;
         //$this->request->response($data, $status);

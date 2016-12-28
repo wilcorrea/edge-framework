@@ -8,10 +8,10 @@ class main
 {
     protected $http;
 
-    public function __construct(http $r)
+    public function __construct()
     {
-        $this->http = $r;
-
+        $this->http = new http();
+       
     }
 
 }
