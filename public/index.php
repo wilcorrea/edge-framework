@@ -11,7 +11,6 @@ date_default_timezone_set(TIMEZONE);
 
 new Core\kernel(); //Launch!
 
-require __DIR__.'/../src/routes.php'; //TODO
 
 
 

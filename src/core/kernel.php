@@ -19,7 +19,5 @@ class Kernel
         $this->router = new Router();
         $this->router->router();
 
-        //$this->view = $c->get('view');
-        //$this->db   = $c->get('db');
     }
 }

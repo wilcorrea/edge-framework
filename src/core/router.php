@@ -9,20 +9,20 @@ use FastRoute;
 
 class Router extends Kernel
 {
-    private $request;
+    protected $http;
     private $routes;
 
     public function __construct()
     {
-        $this->request = new Http();
+        $this->http = new Http();
         $this->routes    = new Routes();
     }
 
     function router(){
         $dispatcher = $this->routes->get();
 
-        $httpMethod = $this->request->getMethod();
-        $uri        = $this->request->getUri();
+        $httpMethod = $this->http->getMethod();
+        $uri        = $this->http->getUri();
 
         
 
@@ -34,11 +34,11 @@ class Router extends Kernel
         $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
         switch ($routeInfo[0]) {
             case FastRoute\Dispatcher::NOT_FOUND:
-                // ... 404 Not Found
+                $this->http->response('<h1>Oops - 404 Not Found</h1>', '404');
                 break;
             case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
                 $allowedMethods = $routeInfo[1];
-                // ... 405 Method Not Allowed
+                $this->http->response('<h1>Oops - 405 Method Not Allowed</h1>', '405');
                 break;
             case FastRoute\Dispatcher::FOUND:
                 $handler        = $routeInfo[1];
