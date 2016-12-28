@@ -7,7 +7,6 @@ use Core\routes;
 use App\Controller;
 use FastRoute;
 
-
 class Router extends Kernel
 {
     protected $http;
@@ -15,17 +14,18 @@ class Router extends Kernel
 
     public function __construct()
     {
-        $this->http = new Http();
-        $this->routes    = new Routes();
+        $this->http   = new Http();
+        $this->routes = new Routes();
     }
 
-    function router(){
+    function router()
+    {
         $dispatcher = $this->routes->get();
 
         $httpMethod = $this->http->getMethod();
         $uri        = $this->http->getUri();
 
-        
+
 
         if (false !== $pos = strpos($uri, '?')) {
             $uri = substr($uri, 0, $pos);
@@ -39,13 +39,14 @@ class Router extends Kernel
                 break;
             case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
                 $allowedMethods = $routeInfo[1];
-                $this->http->response('<h1>Oops - 405 Method Not Allowed</h1>', '405');
+                $this->http->response('<h1>Oops - 405 Method Not Allowed</h1>',
+                    '405');
                 break;
             case FastRoute\Dispatcher::FOUND:
                 $handler        = $routeInfo[1];
                 $vars           = $routeInfo[2];
                 list($class, $method) = explode(":", $handler, 2);
-                call_user_func_array(array( $class, $method), $vars);
+                call_user_func_array(array($class, $method), $vars);
                 break;
         }
     }

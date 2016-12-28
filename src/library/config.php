@@ -1,2 +1,2 @@
-<?php 
+<?php
 define(workers, 10);

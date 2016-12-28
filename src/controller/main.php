@@ -2,12 +2,11 @@
 
 namespace App\Controller;
 
-class main
+class main extends \Core\Kernel
 {
-    
+
     function __construct()
     {
-       
+        
     }
-
 }
