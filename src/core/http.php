@@ -6,10 +6,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use mPDF;
 
-class Http extends Core\Kernel
+class Http extends Kernel
 {
-    private $request;
-    private $response;
+    protected $request;
+    protected $response;
 
     public function __construct()
     {
@@ -23,37 +23,37 @@ class Http extends Core\Kernel
 
     function post($key)
     {
-        return $request->request->get($key);
+        return $this->request->request->get($key);
     }
 
     function getServerVars($key)
     {
-        return $request->server->get($key);
+        return $this->request->server->get($key);
     }
 
     function getUploadedFiles($key)
     {
-        return $request->files->get($key);
+        return $this->request->files->get($key);
     }
 
     function getHeaders($key)
     {
-        return $request->headers->get($key);
+        return $this->request->headers->get($key);
     }
 
     function getUri()
     {
-        return $request->getPathInfo();
+        return $this->request->getPathInfo();
     }
 
     function getMethod()
     {
-        return $request->getMethod();
+        return $this->request->getMethod();
     }
 
     function getLanguages()
     {
-        return $request->getLanguages();
+        return $this->request->getLanguages();
     }
 
     /**

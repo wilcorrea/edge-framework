@@ -2,22 +2,24 @@
 
 namespace Core;
 
-use Core\Http;
-
+use Core\http;
+use Core\router;
 
 class Kernel
 {
-    protected $view;
-    protected $db;
+    protected $http;
+    protected $router;
 
     public function __construct()
     {
         if (!session_id()) {
             session_start();
         }
-        new \Core\Http();
-        new \Core\Routes();
-        $this->view = $c->get('view');
-        $this->db   = $c->get('db');
+        
+        $this->router = new Router();
+        $this->router->router();
+
+        //$this->view = $c->get('view');
+        //$this->db   = $c->get('db');
     }
 }

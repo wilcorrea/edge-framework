@@ -26,6 +26,7 @@
         "symfony/http-foundation": "^3.2",
         "symfony/routing": "^3.2",
         "react/react": "^0.4.2",
-        "mpdf/mpdf": "^6.1"
+        "mpdf/mpdf": "^6.1",
+        "nikic/fast-route": "^1.1"
     }
 }
