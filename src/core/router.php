@@ -4,6 +4,7 @@ namespace Core;
 
 use Core\http;
 use Core\routes;
+use App;
 use FastRoute;
 
 
@@ -43,7 +44,8 @@ class Router extends Kernel
             case FastRoute\Dispatcher::FOUND:
                 $handler        = $routeInfo[1];
                 $vars           = $routeInfo[2];
-                // ... call $handler with $vars
+                list($class, $method) = explode(":", $handler, 2);
+                call_user_func_array(array( new $class, $method), $vars);
                 break;
         }
     }
