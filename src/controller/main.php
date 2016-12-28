@@ -2,7 +2,8 @@
 
 namespace App\Controller;
 
-class MainController {
+class main
+{
     
     function __construct()
     {

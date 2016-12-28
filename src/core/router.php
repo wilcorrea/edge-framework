@@ -44,8 +44,8 @@ class Router extends Kernel
             case FastRoute\Dispatcher::FOUND:
                 $handler        = $routeInfo[1];
                 $vars           = $routeInfo[2];
-                //var_dump($handler);die;
-                call_user_func_array( $handler, $vars);
+                list($class, $method) = explode(":", $handler, 2);
+                call_user_func_array(array( $class, $method), $vars);
                 break;
         }
     }

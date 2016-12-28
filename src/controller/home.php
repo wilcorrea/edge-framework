@@ -2,14 +2,14 @@
 
 namespace App\Controller;
 
-class HomeController extends MainController{
+class home extends main{
     
     function __construct()
     {
-        var_dump('oi');
+        
     }
 
-    function dispatch(){
+    public function dispatch(){
         var_dump('oi');die;
     }
     

@@ -15,7 +15,7 @@ class Routes extends Router
     function get()
     {
         $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
-    $r->addRoute('GET', '/', '\App\Controller\HomeController::dispatch()');
+    $r->addRoute('GET', '/', '\App\Controller\home:dispatch');
 //    // {id} must be a number (\d+)
 //    $r->addRoute('GET', '/user/{id:\d+}', 'get_user_handler');
 //    // The /{title} suffix is optional
