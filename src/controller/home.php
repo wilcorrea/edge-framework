@@ -14,8 +14,10 @@ final class home extends main
 
     function dispatch()
     {
-        $data = file_get_contents(__DIR__ . '/../view/home.twig') ;
+        $data = $this->view->render('home.twig', array("title" => 'Hello!'));
         $this->http->response($data, 200, 'text/html');
+
+        
     }
 
     function showId()
