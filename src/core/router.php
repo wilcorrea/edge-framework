@@ -35,14 +35,14 @@ class Router extends Kernel
         $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
         switch ($routeInfo[0]) {
             case FastRoute\Dispatcher::NOT_FOUND:
-                $error = new \App\Controller\exceptions();
-                $method = 'error404';
+                $error          = new \App\Controller\exceptions();
+                $method         = 'error404';
                 call_user_func_array(array($error, $method), array());
                 break;
             case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
                 $allowedMethods = $routeInfo[1];
-                $error = new \App\Controller\exceptions();
-                $method = 'error405';
+                $error          = new \App\Controller\exceptions();
+                $method         = 'error405';
                 call_user_func_array(array($error, $method), array());
                 break;
             case FastRoute\Dispatcher::FOUND:

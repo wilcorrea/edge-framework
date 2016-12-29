@@ -16,9 +16,11 @@ class kernel
         }
 
         $this->router = new Router();
-        ob_start();
         $this->router->router();
+<<<<<<< HEAD
         $output = ob_get_contents();
         ob_end_clean();
+=======
+>>>>>>> upstream/master
     }
 }

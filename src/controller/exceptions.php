@@ -18,7 +18,7 @@ final class exceptions extends main
 
     function error405()
     {
-         $data = $this->view->render('405.twig', array());
+        $data = $this->view->render('405.twig', array());
         $this->http->response($data);
     }
 
