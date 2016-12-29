@@ -66,7 +66,7 @@ final class db extends kernel
     function __construct($database = false, $options = false)
     {
         // set default variables
-        $this->errors = $options['err']?$options['err']:true;
+        $this->errors = $options['err'] ? $options['err'] : true;
         // check if have database
         if (!$database) {
             return false;
@@ -107,7 +107,7 @@ final class db extends kernel
         // define document
         $document = $document ? $document : [];
         // define query
-        $query = self::query($filter)?self::query($filter):self::query();
+        $query    = self::query($filter) ? self::query($filter) : self::query();
         // open manager
         $manager  = self::open();
         //

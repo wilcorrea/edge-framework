@@ -18,20 +18,18 @@ final class users extends main
             $this->http->response($data);
         } else if ($method == 'POST') {
             $username = $this->http->post('username');
-            $insert = $this->db->create('users', array('username' => $username));
-            
-            if($insert)
-                header('Location: /example/users');
+            $insert   = $this->db->create('users',
+                array('username' => $username));
+
+            if ($insert) header('Location: /example/users');
         }
     }
 
     function delete()
     {
-       
+
         $delete = $this->db->delete('users', []);
-        if($delete)
-                header('Location: /example/users');
-        
+        if ($delete) header('Location: /example/users');
     }
 
     function get()

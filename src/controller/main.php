@@ -16,7 +16,6 @@ class main
     {
         $this->http = new http();
         $this->view = new view();
-        $this->db = new db();
-        
+        $this->db   = new db();
     }
 }

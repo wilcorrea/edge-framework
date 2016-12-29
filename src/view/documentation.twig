@@ -11,34 +11,34 @@
         <div id="page">
             <div class="head">
                 <div class="logo">
-                <img src="/images/logo.png" />
+                    <img src="/images/logo.png" />
                 </div>
                 <div class="menu">
-                <ul class="topnav" id="myTopnav">
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/features">Features</a></li>
-                    <li><a href="/docs">Documentation</a></li>
-                    <li><a href="https://github.com/jersobh/edge-framework">Github</a></li>
-                    <li class="icon">
-                        <a href="javascript:void(0);" onclick="nav()">&#9776;</a>
-                    </li>
-                </ul>
+                    <ul class="topnav" id="myTopnav">
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/docs">Documentation</a></li>
+                        <li><a href="https://github.com/jersobh/edge-framework">Github</a></li>
+                        <li class="icon">
+                            <a href="javascript:void(0);" onclick="nav()">&#9776;</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="container">
                 <h1 class="title">Getting started</h1>
 
                 <p class='brief'>Well, it's pretty simple. Just follow the examples included on the following tips:</p>
-                
-                 <h4 class="title">Controllers</h4>
-                 <p class='brief'>All controllers should extend the main controller. The main controller is responsible to instance some features like request/response and views. <br /> Just follow the home controller example.</p>
-                 <h4 class="title">Routes</h4>
-                 <p class='brief'>You can add more routes into core/routes.php file. Just follow the examples there. You can also set a uri like users/{id} to pass a param 'id' to your controller. <br />Yeah, awesome.</p>
-                 <h4 class="title">Templates</h4>
-                 <p class='brief'>Templates are placed into src/views folder. They are twig templates. You can learn twig -> <a href="http://twig.sensiolabs.org/documentation">here</a> <-</p>
-                 <h4 class="title">Cache</h4>
-                 <p class='brief'>Cache makes things faster. But they can be annoying as you develop and can't see the changes. If it happens, just delete the contents inside the /cache/ folder. Don't blame me, I am trying to help you.</p>
-                
+
+                <h4 class="title">Controllers</h4>
+                <p class='brief'>All controllers should extend the main controller. The main controller is responsible to instance some features like request/response and views. <br /> Just follow the home controller example.</p>
+                <h4 class="title">Routes</h4>
+                <p class='brief'>You can add more routes into core/routes.php file. Just follow the examples there. You can also set a uri like users/{id} to pass a param 'id' to your controller. <br />Yeah, awesome.</p>
+                <h4 class="title">Templates</h4>
+                <p class='brief'>Templates are placed into src/views folder. They are twig templates. You can learn twig -> <a href="http://twig.sensiolabs.org/documentation">here</a> <-</p>
+                <h4 class="title">Cache</h4>
+                <p class='brief'>Cache makes things faster. But they can be annoying as you develop and can't see the changes. If it happens, just delete the contents inside the /cache/ folder. Don't blame me, I am trying to help you.</p>
+
             </div>
             <div id="footer">
                 <div class="left">
@@ -46,15 +46,15 @@
                 </div>
             </div>
         </div>
-                <script>
-                    function nav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-                    </script>
+        <script>
+            function nav() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
     </body>
 </html>

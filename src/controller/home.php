@@ -28,7 +28,8 @@ final class home extends main
         $this->http->responseJson(array("username" => "AnakinSkywalker", "password" => "vadd3r"));
     }
 
-    function info(){
+    function info()
+    {
         echo phpinfo();
     }
 }
