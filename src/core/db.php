@@ -6,8 +6,8 @@ final class db extends kernel
 {
     // defaults
     private $url  = MONGODB_IP;
-    private $port = '27017';
-    private $base = 'edge';
+    private $port = MONGODB_PORT;
+    private $base = MONGODB_DB_NAME;
     private $errors;
 
     /**
