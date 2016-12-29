@@ -33,14 +33,7 @@ body,html {
     font-size: 16px;
     line-height: 1.7;
     color: #7f7f7f;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#95a791+0,b6c2aa+100 */
-background: rgb(149,167,145); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(149,167,145,1) 0%, rgba(182,194,170,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(149,167,145,1) 0%,rgba(182,194,170,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(149,167,145,1) 0%,rgba(182,194,170,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#95a791', endColorstr='#b6c2aa',GradientType=0 ); /* IE6-9 */
-
-    height: 100vh;
+    height: 100%;
     position: relative;
 }
 
