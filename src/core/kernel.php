@@ -17,7 +17,5 @@ class kernel
 
         $this->router = new Router();
         $this->router->router();
-        $output = ob_get_contents();
-        ob_end_clean();
     }
 }
