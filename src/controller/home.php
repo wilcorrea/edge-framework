@@ -27,4 +27,8 @@ final class home extends main
         $data = $this->view->render('home.twig', array("title" => 'Hello!'));
         $this->http->responseJson(array("username" => "AnakinSkywalker", "password" => "vadd3r"));
     }
+
+    function info(){
+        echo phpinfo();
+    }
 }

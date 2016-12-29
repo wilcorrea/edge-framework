@@ -4,6 +4,7 @@
 
 edge-redis:
   image: phpdockerio/redis:latest
+  hostname: edge-redis
   container_name: edge-redis
 
 edge-webserver:
@@ -29,6 +30,7 @@ edge-php-fpm:
 
 edge-mongo:
   image: mongo
+  hostname: edge-mongodb
   container_name: edge-mongodb
   ports:
     - "27017:27017"
