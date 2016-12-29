@@ -26,18 +26,14 @@
                 </div>
             </div>
             <div class="container">
-                <h1 class="title">Getting started</h1>
-
-                <p class='brief'>Well, it's pretty simple. Just follow the examples included on the following tips:</p>
-
-                <h4 class="title">Controllers</h4>
-                <p class='brief'>All controllers should extend the main controller. The main controller is responsible to instance some features like request/response and views. <br /> Just follow the home controller example.</p>
-                <h4 class="title">Routes</h4>
-                <p class='brief'>You can add more routes into core/routes.php file. Just follow the examples there. You can also set a uri like users/{id} to pass a param 'id' to your controller. <br />Yeah, awesome.</p>
-                <h4 class="title">Templates</h4>
-                <p class='brief'>Templates are placed into src/views folder. They are twig templates. You can learn twig -> <a href="http://twig.sensiolabs.org/documentation">here</a> <-</p>
-                <h4 class="title">Cache</h4>
-                <p class='brief'>Cache makes things faster. But they can be annoying as you develop and can't see the changes. If it happens, just delete the contents inside the /cache/ folder. Don't blame me, I am trying to help you.</p>
+                <h1 class="title">Add User</h1>
+                <form id="form-add" action="/example/users/add" method="POST">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" name="username" class="form-control" id="username">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
 
             </div>
             <div id="footer">

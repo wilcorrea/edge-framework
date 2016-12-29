@@ -15,5 +15,4 @@ final class features extends main
         $data = $this->view->render('features.twig', array());
         $this->http->response($data);
     }
-
 }

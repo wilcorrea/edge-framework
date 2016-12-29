@@ -15,5 +15,4 @@ final class docs extends main
         $data = $this->view->render('documentation.twig', array());
         $this->http->response($data);
     }
-
 }
